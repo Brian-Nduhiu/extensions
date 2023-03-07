@@ -1,4 +1,4 @@
-const article = document.querySelector("article");
+const article = document.querySelector("Content scripts");
 
 // `document.querySelector` may return null if the selector doesn't match anything.
 if (article) {
