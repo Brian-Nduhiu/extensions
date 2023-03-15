@@ -1,0 +1,38 @@
+{
+    "name": "screenshot-ocr-extension",
+    "version": "1.0.0",
+    "description": "A Chrome extension that takes a screenshot, performs OCR, and displays the highlighted text on the screen.",
+    "manifest_version": 2,
+    "icons": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage",
+      "https://tesseract.projectnaptha.com/"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+      "popup.html",
+      "popup.css",
+      "popup.js"
+    ]
+  }
+  

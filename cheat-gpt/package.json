@@ -1,0 +1,15 @@
+{
+    "name": "screenshot-ocr-extension",
+    "version": "1.0.0",
+    "description": "A Chrome extension that takes a screenshot, performs OCR, and displays the highlighted text on the screen.",
+    "author": "Brian Nduhiu",
+    "license": "MIT",
+    "dependencies": {
+      "tesseract.js": "^2.1.4"
+    },
+    "scripts": {
+      "build": "webpack",
+      "watch": "webpack --watch"
+    }
+  }
+  
